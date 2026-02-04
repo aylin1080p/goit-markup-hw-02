@@ -1,28 +1,66 @@
+/* ===== RESET / BASE ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
   font-family: "Roboto", sans-serif;
   color: #434455;
 }
 
+/* ===== HEADER ===== */
+.header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 24px 156px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #ffffff;
+}
+
+/* Logo */
 .logo {
   text-decoration: none;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
   color: #4d5ae5;
-  margin-left: 156px;
-  margin-top: 24px;
 }
 
 .logo span {
   color: #2e2f42;
 }
 
+/* Navigation */
+.menu-nav {
+  margin: 0 auto;
+}
+
+.menu-link {
+  display: flex;
+  gap: 40px;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .link {
-  color: #2e2f42;
   font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.02em;
+
   text-decoration: none;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
 
 .link:hover,
@@ -30,6 +68,7 @@ body {
   color: #404bbf;
 }
 
+/* Contact area */
 address {
   display: flex;
   gap: 40px;
@@ -37,12 +76,10 @@ address {
 }
 
 .contact-link {
-  display: flex;
-  margin-left: auto;
-  font-style: normal;
-  color: #434455;
   text-decoration: none;
+  font-size: 16px;
   letter-spacing: 0.02em;
+  color: #434455;
 }
 
 .contact-link:hover,
@@ -50,19 +87,54 @@ address {
   color: #404bbf;
 }
 
-.hero-title {
-  font-size: 56px;
-
-  font-weight: 700;
-  letter-spacing: 0.02em;
-  color: #ffffff;
-}
+/* ===== HERO ===== */
 .hero {
   background-color: #2e2f42;
+  min-height: 600px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
-  padding: 188px 0;
 }
 
+.hero-title {
+  max-width: 496px;
+  margin: 0 0 48px;
+
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+
+  color: #ffffff;
+}
+
+/* ===== BUTTON ===== */
+.button {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  background-color: #4d5ae5;
+  color: #ffffff;
+
+  padding: 16px 32px;
+  border-radius: 4px;
+  border: none;
+
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  background-color: #404bbf;
+}
+
+/* ===== TYPOGRAPHY HELPERS ===== */
 h2 {
   font-size: 36px;
   font-weight: 700;
@@ -79,61 +151,4 @@ h2 {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-}
-
-.button {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-
-  background-color: #4d5ae5;
-  color: #ffffff;
-
-  padding: 16px 32px;
-  border-radius: 4px;
-  border: none;
-
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  cursor: pointer;
-}
-
-.button:hover,
-.button:focus {
-  background-color: #404bbf;
-}
-.header {
-  width: 1440px;
-  height: 72px;
-  background-color: #ffffff;
-
-  display: flex;
-  align-items: center;
-
-  margin: 0 auto;
-}
-
-/* menu-nav icerisinde Studio Portfolio Contacts tutuyor
-bu nav icinde link tutan sirasiz bir liste var
-bu listenin ul class'i menu-link
-
-
-
-*/
-.menu-nav {
-  width: 261px;
-  height: 24px;
-
-  display: flex;
-  margin-top: 24px;
-  margin-left: 76px;
-  gap: 40px;
-}
-.menu-link {
-  display: flex;
-  gap: 30px;
-  font-style: normal;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
